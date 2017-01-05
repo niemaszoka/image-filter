@@ -1,0 +1,12 @@
+.main {
+  background-color: silver;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+
+
+  .result-canvas {
+    margin: 50px;
+  }
+}

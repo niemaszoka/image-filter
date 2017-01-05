@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom image filter</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+  </head>
+  <body onload="setCanvas()">
+
+    <main class="main" role="main">
+      <div class="image-uploader">
+        <input type="file" onchange="checkFile()" id="imageInput"><br>
+      </div>
+
+      <img class="origin-image" id="originImage" width="200">
+      <canvas class="result-canvas" id="resultCanvas" width="500" height="500"></canvas>
+    </main>
+
+    <aside class="sidebar" role="complementary">
+
+    </aside>
+
+    <footer class="footer" role="contentinfo">
+
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\/script>');</script>
+    <script src="assets/js/scripts.min.js"></script>
+
+  </body>
+</html>
