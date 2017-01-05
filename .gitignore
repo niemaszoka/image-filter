@@ -8,3 +8,5 @@ node_modules
 .idea
 style.min.css
 scripts.min.js
+
+.idea/workspace.xml
