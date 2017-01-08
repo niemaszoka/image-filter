@@ -17,24 +17,50 @@
   <body onload="setCanvas()">
 
     <main class="main" role="main">
-      <div class="image-uploader">
-        <input type="file" onchange="checkFile()" id="imageInput"><br>
+      <div class="menu">
+        <div class="image-uploader">
+          <input class="file-input" type="file" onchange="checkFile()" id="imageInput"><br>
+          <label class="file-input-label button-white" for="imageInput">UPLOAD IMAGE</label>
+        </div>
+        <div class="row">
+          <input type="radio" name="filterMode" value="image" id="imageOption"><label for="imageOption">FULL IMAGE</label>
+          <input type="radio" name="filterMode" value="stripes" id="stripesOption" checked><label for="stripesOption">STRIPES</label>
+        </div>
+        <div class="stripes-options" id="stripesParameters">
+          <div class="slider-container">
+            <div id="stripeWidthSlider" class="stripesWidthSlider"></div><label class="slider-container-label">STRIPES WIDTH</label>
+          </div>
+          <div class="slider-container">
+            <div id="stripeSpaceSlider" class="stripesWidthSlider"></div><label class="slider-container-label">SPACE BETWEEN STRIPES</label>
+          </div>
+          <div class="row">
+            <input type="radio" name="stripesDirection" value="vertical" id="stripesVerticalOption" checked><label for="stripesVerticalOption">VERTICAL</label>
+            <input type="radio" name="stripesDirection" value="horizontal" id="stripesHorizontalOption"><label for="stripesHorizontalOption">HORIZONTAL</label>
+          </div>
+        </div>
+
+        <button class="button" onclick="addGrayStripes()">GRAY STRIPES</button>
+        <button class="button" onclick="addColorInvertedStripes()">COLOR INVERTED STRIPES</button>
+        <button class="button" onclick="addColorTint()">STRIPES WITH COLOR TINT</button>
+        <input id="colorInput" type="color">
+
+        <button class="button-white" onclick="resetFilter()">RESET</button>
       </div>
 
-      <img class="origin-image" id="originImage" width="200">
-      <canvas class="result-canvas" id="resultCanvas" width="500" height="500"></canvas>
+      <div class="images-container">
+        <img class="origin-image" id="originImage" width="200">
+        <canvas class="result-canvas" id="resultCanvas" width="500" height="500"></canvas>
+      </div>
+
     </main>
 
-    <aside class="sidebar" role="complementary">
-
-    </aside>
 
     <footer class="footer" role="contentinfo">
 
     </footer>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\/script>');</script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="assets/js/scripts.min.js"></script>
 
   </body>

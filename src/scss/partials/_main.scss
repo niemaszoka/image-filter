@@ -1,12 +1,43 @@
 .main {
-  background-color: silver;
+  background-color: $colorWhite;
   display: flex;
   align-items: center;
   height: 100%;
-  flex-direction: column;
+  flex-direction: row;
 
 
   .result-canvas {
     margin: 50px;
   }
+}
+
+
+.menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 10px 50px 10px;
+  min-width: 300px;
+  background: linear-gradient($colorAqua, $colorCoral)
+}
+
+
+.stripesWidthSlider {
+  width: 200px;
+}
+
+label {
+  color: white;
+  padding: 10px;
+}
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
