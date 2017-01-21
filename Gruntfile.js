@@ -193,6 +193,12 @@ module.exports = function (grunt) {
           '<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
+    },
+
+    bower_concat: {
+      all: {
+        dest: '<%= project.assets %>/js/' + 'bower.js'
+      }
     }
   });
 
@@ -219,5 +225,7 @@ module.exports = function (grunt) {
     'jshint',
     'uglify'
   ]);
+
+  grunt.loadNpmTasks('grunt-bower-concat');
 
 };

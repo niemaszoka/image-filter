@@ -2,6 +2,7 @@
 # @author Sylwia Grzegolec
 
 node_modules
+bower_components
 .DS_Store
 .tmp
 .sass-cache

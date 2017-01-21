@@ -41,3 +41,18 @@ label {
     position: absolute;
     z-index: -1;
 }
+
+.stripes-options {
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.slider-container {
+  padding: 15px;
+}
+
+.row {
+  padding: 20px;
+}
